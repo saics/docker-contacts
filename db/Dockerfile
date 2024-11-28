@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/mssql/server:2022-latest
 # Switch to root user to install additional software
 USER root
 
-# Install prerequisites and sqlcmd (adjust as needed based on previous steps)
+# Install prerequisites and sqlcmd (adjust as needed)
 RUN apt-get update && \
     apt-get install -y curl apt-transport-https gnupg && \
     curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \

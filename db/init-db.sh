@@ -5,7 +5,13 @@
 
 # Wait for SQL Server to start
 echo "Waiting for SQL Server to start..."
-sleep 15
+
+# Wait until SQL Server is ready to accept connections
+until /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Passw0rd' -Q "SELECT 1" > /dev/null 2>&1
+do
+  echo -n "."
+  sleep 1
+done
 
 # Check if the database files exist
 if [ ! -f /var/opt/mssql/data/ContactsDB.mdf ]; then
@@ -21,5 +27,5 @@ else
     echo "Database already exists. Skipping restore."
 fi
 
-# Wait indefinitely to keep the container running
+# Keep the script running to prevent the container from exiting
 wait
