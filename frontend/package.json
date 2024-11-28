@@ -1,0 +1,23 @@
+{
+  "name": "vuezadatak",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "vue": "^3.4.29",
+    "vue-i18n": "^9.14.1",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^5.0.8",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0"
+  }
+}
