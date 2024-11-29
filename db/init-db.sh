@@ -27,5 +27,4 @@ else
     echo "Database already exists. Skipping restore."
 fi
 
-# Keep the script running to prevent the container from exiting
 wait
